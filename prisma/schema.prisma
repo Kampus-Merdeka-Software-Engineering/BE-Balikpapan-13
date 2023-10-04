@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-1.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:zpchRuzItsaCxBoJLJyo@containers-us-west-104.railway.app:6167/railway"
+}
+
+model Course {
+  id_course        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  kode_course     String
+  name_course   String
+  jumlah_course   String
+  desc_course  String
+  image_course String
+  vidio_course  String
+}
+model Categories {
+  id_categoris        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  kode_categories     String
+  name_categories   String
+  desc_categories   String
+  image_categories  String
+  jumlah_categories String
+}
