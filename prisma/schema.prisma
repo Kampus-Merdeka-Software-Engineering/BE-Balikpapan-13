@@ -40,3 +40,12 @@ model registration {
   course String
   gender String
 }
+
+model Vidio {
+  id_vidio        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  id_course     Int
+  nama_vidio   String
+  link_vidio  String
+  duration   String
+}
