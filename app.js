@@ -18,6 +18,7 @@ app.use("/course", courseRoutes)
 
 //rute untuk registration
 app.use("/registration", registrationRoutes )
-app.listen(3001, () => {
-    console.log('server is running on port 3001');
+const PORT = process.env.PORT || 30001;
+app.listen(PORT, () => {
+    console.log('server is running on port '+ PORT);
 });
