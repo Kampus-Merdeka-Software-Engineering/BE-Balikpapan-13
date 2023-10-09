@@ -15,21 +15,9 @@ model Course{
   createdAt DateTime @default(now())
   kode_course     String
   name_course   String
-  jumlah_course   String
-  desc_course  String
+  kategori_course   String
   image_course String
   vidio_course  String
-}
-
-model Categories {
-  id_categories        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  kode_categories     String
-  name_categories   String
-  harga_categories  Int
-  desc_categories   String
-  image_categories  String
-  jumlah_categories String
 }
 
 model registration {
